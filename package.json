@@ -1,8 +1,8 @@
 {
-  "name": "apidoc",
+  "name": "cu8-apidoc",
   "version": "0.16.2",
   "description": "RESTful web API Documentation Generator",
-  "author": "Peter Rottmann <rottmann@inveris.de>",
+  "author": "Hoàng Linh forked Peter Rottmann <rottmann@inveris.de>",
   "license": "MIT",
   "preferGlobal": true,
   "bin": "bin/apidoc",
@@ -10,10 +10,10 @@
   "homepage": "http://apidocjs.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/apidoc/apidoc.git"
+    "url": "https://github.com/ninjavungve/cu8-apidoc.git"
   },
   "bugs": {
-    "url": "https://github.com/apidoc/apidoc/issues"
+    "url": "https://github.com/ninjavungve/cu8-apidoc/issues"
   },
   "scripts": {
     "test": "npm run jshint && mocha test/",
@@ -24,6 +24,7 @@
   "keywords": [
     "api",
     "apidoc",
+    "cu8-apidoc",
     "doc",
     "documentation",
     "rest",
