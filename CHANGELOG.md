@@ -1,6 +1,9 @@
 # apiDoc Changelog
 
 
+#### 0.16.2
+Add locale vi into application
+
 #### 0.16.0
 
 Greatest improvement: Plugin support
