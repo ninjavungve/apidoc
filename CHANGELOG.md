@@ -1,5 +1,7 @@
 # apiDoc Changelog
 
+#### 0.16.3
+Add new feature chosser group api
 
 #### 0.16.2
 Add locale vi into application
