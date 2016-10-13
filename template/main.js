@@ -322,10 +322,32 @@ require([
     // Bootstrap Scrollspy
     $(this).scrollspy({ target: '#scrollingNav', offset: 18 });
 
+    // Handle event change select group
+    // Startup onLoad page
+    var scdPath = window.location.href.split('#')[1];
+    if (scdPath) {
+        var pathTemp = scdPath.split('-');
+        if (pathTemp.length > 2) {
+            $('#cmb-article').val('#' + pathTemp[0] + '-' + pathTemp[1]);
+        } else {
+            $('#cmb-article').val('#' + scdPath);
+        }
+    }
+
+    $('#cmb-article').change(function() {
+        window.location.href = window.location.href.split('#')[0] + $(this).val();
+    });
+
     // Content-Scroll on Navigation click.
     $('.sidenav').find('a').on('click', function(e) {
         e.preventDefault();
         var id = $(this).attr('href');
+        var pathTemp2 = id.split('-');
+        if (pathTemp2.length > 2) {
+            $('#cmb-article').val(pathTemp2[0] + '-' + pathTemp2[1]);
+        } else {
+            $('#cmb-article').val(id);
+        }
         if ($(id).length > 0)
             $('html,body').animate({ scrollTop: parseInt($(id).offset().top) }, 400);
         window.location.hash = $(this).attr('href');

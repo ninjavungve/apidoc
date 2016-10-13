@@ -14,6 +14,19 @@
 <body>
 
 <script id="template-sidenav" type="text/x-handlebars-template">
+<select id="cmb-article">
+  {{#each nav}}
+    {{#if title}}
+      {{#if isHeader}}
+        {{#if isFixed}}
+          <option value="#api-{{group}}">{{underscoreToSpace title}}</option>
+        {{else}}
+          <option value="#api-{{group}}">{{underscoreToSpace title}}</option>
+        {{/if}}
+      {{/if}}
+    {{/if}}
+  {{/each}}
+</select>
 <nav id="scrollingNav">
   <ul class="sidenav nav nav-list">
   {{#each nav}}
